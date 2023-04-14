@@ -1,0 +1,139 @@
+/* contentstyles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#menuIcon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+    transform: translateX(-50%);
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#menuOverlay.hidden {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #0070FF;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.thumbnail {
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: -2px 2px 10px #ADADAD;
+    border: solid .5px #fff;
+    border-radius: 2%;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.post {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    max-width: 800px;
+    z-index: 1001;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #ADADAD;
+}
+
+.post.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}

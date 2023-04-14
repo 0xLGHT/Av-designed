@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+UI+Text:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+#menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    box-shadow: 0 0 15px #ADADAD;
+    z-index: 5;
+}
+
+#menuOverlay.hidden {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'SF UI Text', sans-serif;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Add these styles for the video container */
+#videoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Update the existing video styles */
+#bgVideo {
+    /* Remove the z-index property */
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+footer p {
+    font-family: 'SF UI Text', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+    
+nav a:hover {
+    color: #0070FF;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
