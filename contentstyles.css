@@ -20,17 +20,17 @@ main {
 }
 
 #menuIcon {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    width: 30px;
-    height: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
-    z-index: 1000;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 10;
 }
 
 .bar {
@@ -45,11 +45,13 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    border: 4px solid white;
+    box-shadow: 0 0 15px #ADADAD;
+    z-index: 5;
 }
 
 #menuOverlay.hidden {
@@ -80,6 +82,7 @@ nav a:hover {
 h2 {
     text-align: center;
     margin-bottom: 30px;
+    padding-top: 5%;
 }
 
 .blog-thumbnails {
@@ -87,6 +90,7 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    padding-top: 1%;
 }
 
 .thumbnail {
