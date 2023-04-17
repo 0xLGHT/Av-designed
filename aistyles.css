@@ -75,7 +75,7 @@ nav a {
 }
     
 nav a:hover {
-    color: #0070FF;
+    color: #cf0;
     transform: scale(1.1);
     transition: color 0.3s ease, transform 0.3s ease;
 }

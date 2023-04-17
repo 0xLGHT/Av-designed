@@ -73,7 +73,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0070FF;
+    color: #cf0;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
