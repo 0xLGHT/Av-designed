@@ -5,19 +5,32 @@ menuIcon.addEventListener('click', () => {
     menuOverlay.classList.toggle('hidden');
 });
 
-const thumbnails = document.querySelectorAll(".thumbnail");
-const posts = document.querySelectorAll(".post");
 
-thumbnails.forEach((thumbnail, index) => {
+const modals = document.querySelectorAll(".modal");
+const thumbnails = document.querySelectorAll(".thumbnail");
+const closeBtns = document.querySelectorAll(".close");
+
+thumbnails.forEach((thumbnail) => {
     thumbnail.addEventListener("click", () => {
-        posts[index].classList.toggle("hidden");
+        const id = thumbnail.getAttribute("data-id");
+        const modal = document.querySelector(`.modal[data-id="${id}"]`);
+
+        modal.style.display = "block";
     });
 });
 
-posts.forEach((post) => {
-    post.addEventListener("click", (event) => {
-        if (event.target === post) {
-            post.classList.add("hidden");
+closeBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener("click", () => {
+        modals.forEach((modal) => {
+            modal.style.display = "none";
+        });
+    });
+});
+
+modals.forEach((modal) => {
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
     });
 });
