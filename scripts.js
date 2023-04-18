@@ -34,3 +34,16 @@ modals.forEach((modal) => {
         }
     });
 });
+
+function handleResize() {
+    const videoElement = document.getElementById("bg-video");
+    if (window.innerWidth <= 768) {
+        videoElement.pause();
+    } else {
+        videoElement.play();
+    }
+}
+
+// Listen for window resize events
+window.addEventListener("resize", handleResize);
+handleResize(); // Call the function once to handle initial load

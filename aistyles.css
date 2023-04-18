@@ -102,5 +102,6 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     .image-grid {
         grid-template-columns: 1fr;
+        padding-top: 15%;
     }
 }

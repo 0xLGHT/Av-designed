@@ -119,6 +119,7 @@ nav a:hover {
 .text-container {
     flex: 1;
     padding: 10px;
+    font-size: large;
 }
 
 @media (max-width: 768px) {
@@ -131,5 +132,11 @@ nav a:hover {
 
     .row:nth-of-type(even) .video-container {
         order: 1;
+    }
+    .banner-image {
+        margin-bottom: 25%;
+    }
+    .row {
+        margin-bottom: 15%;
     }
 }

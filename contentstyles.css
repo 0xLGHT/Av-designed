@@ -79,6 +79,12 @@ nav a:hover {
 }
 
 
+.articles {
+    color: #cf0;
+    font-weight: 900;
+    font-style: italic;
+}
+
 h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -168,6 +174,8 @@ h2 {
 .modal-content h1 {
     color: #cf0;
     text-align: center;
+    font-style: italic;
+    font-weight: 900;
 }
 
 .blog-post {
@@ -198,5 +206,11 @@ h2 {
 @media screen and (max-width: 768px) {
     .video-grid {
         grid-template-columns: 1fr;
+    }
+    .modal {
+        padding-top: 50px;
+    }
+    .blog {
+        padding-top: 5%;
     }
 }
