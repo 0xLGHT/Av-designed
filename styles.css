@@ -156,11 +156,9 @@ nav a:hover {
         display: block;
     }
     footer {
-        background-color: #cf0;
+        display: none;
     }
     footer p {
-        font-weight: 700;
-        font-style: italic;
-        color: adadad;
+       display: none;
     }
 }
