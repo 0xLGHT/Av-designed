@@ -133,10 +133,13 @@ nav a:hover {
     .row:nth-of-type(even) .video-container {
         order: 1;
     }
-    .banner-image {
-        margin-bottom: 25%;
-    }
     .row {
         margin-bottom: 15%;
+    }
+    .banner-image {
+        display: none;
+    }
+    .content-grid {
+        margin-top: -8%;
     }
 }
